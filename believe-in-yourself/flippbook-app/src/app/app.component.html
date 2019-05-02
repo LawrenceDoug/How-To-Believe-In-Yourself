@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="appContainer">
+  <nav id="navContainer">
+    <a *ngFor="let link of links" ngClass='nav-item' class="nav-item" routerLink={{link.actuallink}} routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{link.linkname}}</a>
+    <div class="btn-container">
+      <div (click)="changePage(-1)" id="backBtn" class="">Back</div>
+      <div (click)="changePage(1)" id="nextBtn" class="">Next</div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
