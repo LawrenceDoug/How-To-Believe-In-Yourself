@@ -181,10 +181,11 @@ body {
 /* End of flex containers to organize content */
 
 .nav-item {
-    display: block;
+    display: flex;
     width: 100%;
-    height: 70px;
-    line-height: 70px;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
     color: #858ae3;
     background-color: #97dffc;
     border: 1px solid #858ae3;
