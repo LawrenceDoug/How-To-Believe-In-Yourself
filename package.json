@@ -4,11 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
+    "runapp": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --target=production"
+    "postinstall": "ng build -prod"
   },
   "private": true,
   "dependencies": {
