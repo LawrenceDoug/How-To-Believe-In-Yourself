@@ -55,18 +55,27 @@ export class AppComponent {
   changePage = function (num) {
     if (num == -1 && !location.href.includes('/page')) {
       this.router.navigate(['./page10']);
-    } else if (num == 1 && !location.href.includes('/page')) {
-      this.router.navigate(['page2']);
-    } else if (num == 1 && location.href.includes('/page10')) {
-      this.router.navigate(['/']);
-    } else if (num == -1 && location.href.includes('/page2')) {
+    }
+    else if (num == -1 && location.href.includes('/page2')) {
       this.router.navigate(['/'])
-    } else if (num == 1) {
-      var pageNumber = parseInt(location.href.split('e', 2)[1], 10);
+    }
+    else if (num == -1 && location.href.includes('/page10')) {
+      this.router.navigate(['page9']);
+    }
+    else if (num == 1 && !location.href.includes('/page')) {
+      this.router.navigate(['page2']);
+    }
+    else if (num == 1 && location.href.includes('/page10')) {
+      this.router.navigate(['/']);
+    }
+    else if (num == 1) {
+      var pageNumber = parseInt(location.href.slice(-1), 10);
       var newPageNumber = pageNumber + num;
+      console.log(pageNumber);
       this.router.navigate([`/page${newPageNumber}`]);
-    } else if (num == -1) {
-      var pageNumber = parseInt(location.href.split('e', 2)[1], 10);
+    }
+    else if (num == -1) {
+      var pageNumber = parseInt(location.href.slice(-1), 10);
       var newPageNumber = pageNumber + num;
       this.router.navigate([`/page${newPageNumber}`]);
     }
