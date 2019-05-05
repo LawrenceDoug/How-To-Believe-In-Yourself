@@ -12,7 +12,7 @@ export class AppComponent {
 
   links = [{
     linkname: 'Home',
-    actuallink: '/'
+    actuallink: '/home'
   },
   {
     linkname: 'Step 1',
@@ -53,8 +53,8 @@ export class AppComponent {
   ]
 
   changePage = function (num) {
-    if (num == -1 && !location.href.includes('/page')) {
-      this.router.navigate(['./page10']);
+    if (num == -1 && location.href.includes('/home')) {
+      this.router.navigate(['page10']);
     }
     else if (num == -1 && location.href.includes('/page2')) {
       this.router.navigate(['/'])
@@ -71,7 +71,6 @@ export class AppComponent {
     else if (num == 1) {
       var pageNumber = parseInt(location.href.slice(-1), 10);
       var newPageNumber = pageNumber + num;
-      console.log(pageNumber);
       this.router.navigate([`/page${newPageNumber}`]);
     }
     else if (num == -1) {

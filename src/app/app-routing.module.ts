@@ -13,7 +13,9 @@ import { Page9Component } from './pages/page9.component';
 import { Page10Component } from './pages/page10.component';
 
 const routes: Routes = [
-  {path: '', component: Page1Component},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', component: AppComponent},
+  {path: 'home', component: Page1Component},
   {path: 'page2', component: Page2Component },
   {path: 'page3', component: Page3Component },
   {path: 'page4', component: Page4Component },

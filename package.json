@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "dev": "lite-server",
     "postinstall": "ng build --prod"
   },
   "private": true,
@@ -45,6 +46,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "lite-server": "^2.4.0",
     "node-gyp": "^4.0.0",
     "protractor": "~5.4.0",
     "tar": "^4.4.8",
